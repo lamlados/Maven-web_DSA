@@ -1,5 +1,5 @@
-# Maven-web & DSA
-  My first web project using maven and tomcat,
-  about a login system with a verify-code-check. 
-  And I will also try to implement data structures 
-  and alogorithms in Java here.
+# SSM Project and Notes
+---
+ A complete SSM framework build with a book-management example
+ and
+ Some Notes of full instructions in Chinese
