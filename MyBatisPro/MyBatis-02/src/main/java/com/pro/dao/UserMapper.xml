@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace绑定一个对应的mapper接口 -->
+<mapper namespace="com.pro.dao.UserMapper">
+    
+    <!--    标签相当于通过实现类重写方法-->
+    <!--    结果集映射-->
+    <resultMap id="UserMap" type="User">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+<!--    <select id="getUserList" resultType="User">-->
+<!--        select * from mybatis.user-->
+<!--    </select>-->
+
+    <select id="getUserById" resultMap="UserMap" parameterType="int">
+        select * from mybatis.user where id=#{id}
+    </select>
+    <select id="getUserByLimit" parameterType="map" resultMap="UserMap">
+        select * from mybatis.user limit #{startIndex},#{pageSize}
+    </select>
+    <select id="getUserByRowBounds" resultMap="UserMap">
+        select * from mybatis.user
+    </select>
+
+    <insert id="addUser" parameterType="com.pro.pojo.User">
+        insert into mybatis.user (id, name ,pwd) values (#{id},#{name},#{pwd})
+    </insert>
+
+    <update id="updateUser" parameterType="com.pro.pojo.User">
+        update mybatis.user set name=#{name},pwd=#{pwd} where id=#{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from mybatis.user where id=#{id}
+    </delete>
+</mapper>

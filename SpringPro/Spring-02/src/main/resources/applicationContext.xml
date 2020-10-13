@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="address" class="com.pro.pojo.Address">
+        <property name="addr" value="London"/>
+    </bean>
+    <bean id="student" class="com.pro.pojo.Student" >
+        <!--普通值注入，value-->
+        <property name="name" value="lam"/>
+        <!--Bean注入，ref-->
+        <property name="addr" ref="address"/>
+        <!--数组注入，array-->
+        <property name="books">
+            <array>
+                <value>1984</value>
+                <value>百年孤独</value>
+                <value>Data Structures</value>
+            </array>
+        </property>
+        <!--List注入-->
+        <property name="hobbies">
+            <list>
+                <value>music</value>
+                <value>coding</value>
+            </list>
+        </property>
+        <!--Map注入-->
+        <property name="cards">
+            <map>
+                <entry key="IP" value="1997"/>
+                <entry key="IC" value="1007"/>
+            </map>
+        </property>
+        <!--set注入-->
+        <property name="games">
+            <set>
+                <value>DOTA2</value>
+                <value>CS:GO</value>
+            </set>
+        </property>
+        <!--null注入-->
+        <property name="values">
+            <null/>
+        </property>
+        <!--properties注入-->
+        <property name="info">
+            <props>
+                <prop key="学号">2016302442</prop>
+                <prop key="身高">185cm</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
