@@ -4,7 +4,7 @@
 
 ---
 
-笔记基于狂神说Java的b站Spring学习视频，根据自己的理解随之记录
+笔记基于狂神说Java的b站Spring学习视频，根据自己的理解随之记录。
 
 <https://www.bilibili.com/video/BV1WE411d7Dv>
 
