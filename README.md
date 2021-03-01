@@ -1,6 +1,5 @@
 # SSM Project and Notes
 ---
- A complete SSM framework build
- Notes
- Spring Boot blog
+Simple SSM framework builds and learning notes.
+
 
